@@ -47,10 +47,10 @@ h3 {
 }
 
 .image-container img {
-    width: 100%; /* Make images responsive */
-    max-width: 100%; /* Prevent overflow */
+    width: 80%; /* Make images responsive */
+    max-width: 80%; /* Prevent overflow */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 

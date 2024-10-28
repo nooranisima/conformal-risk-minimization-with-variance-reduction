@@ -7,6 +7,10 @@ body {
     background: linear-gradient(180deg, rgba(173, 216, 230, 0.5), rgba(255, 255, 255, 0.5));
     color: #333;
 }
+.banner-container {
+    padding: 20px;
+    margin-bottom: 20px; /* Space below the banner */
+}
 
 .banner-container a {
     color: #6A0dad; /* Dark purple color */

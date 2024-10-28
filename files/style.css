@@ -1,75 +1,46 @@
-canvas {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-}
-
 body {
     font-family: "Times New Roman", Times, serif;
     font-weight: 300;
-    margin: 0; /* Ensure full page usage */
-    height: 100vh; /* Ensure full page height */
+    margin: 0; /* No margin for full-page coverage */
+    height: 100vh; /* Full page height */
+    background: linear-gradient(45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1, #26c6da); /* Subtle moving blue background */
+    animation: backgroundAnimation 10s linear infinite; /* Animation for the background */
 }
 
-.banner-container, .main-container {
-    max-width: 800px; /* Restrict max width for better readability */
-    margin: 0 auto; /* Center align */
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.banner-container {
+    max-width: 1000px; /* Increased width */
+    margin: auto; /* Center align */
+    padding: 40px; /* Increased padding */
     text-align: center; /* Center text */
     position: relative; /* Position for absolute children */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for actual centering */
+    top: 20%; /* Adjust vertical position */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 300;
-    line-height: 1.1;
-    color: inherit;
+h1 {
+    font-size: 2.5em; /* Increased title font size */
+}
+
+h2 {
+    font-size: 2em; /* Increased subtitle font size */
+}
+
+h3 {
+    font-size: 1.5em; /* Increased author font size */
 }
 
 p, .caption {
-    font-family: "Times New Roman", Times, serif;
-    margin-top: 4px;
+    font-size: 1.2em; /* Increased paragraph font size */
+    margin-top: 20px; /* Increased margin */
 }
 
-hr.divider {
-    max-width: 800px;
-    margin: 32px auto;
-}
-
-.stat {
-    font-size: 2.5em;
-    color: #296add;
-    margin: 0;
-}
-
-.statlabel {
-    font-size: 1em;
-}
-
-.caption {
-    font-size: 14px;
-    color: #777;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.citation {
-    background-color: #f1f3f4;
-    padding: 12px;
-    margin: 12px auto;
-    max-width: 700px;
-    border-radius: 6px;
-    text-align: left;
-}
-
-.citation h4 {
-    font-weight: bold;
-    color: #296add;
+.abstract {
+    text-align: center; /* Center align abstract */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .buttons .btn {
@@ -86,7 +57,22 @@ hr.divider {
     background-color: transparent; /* Make button background transparent */
 }
 
-.btn-search {
-    margin: 20px auto;
-    font-size: 16px;
+.main-container {
+    max-width: 1000px; /* Increased width */
+    margin: 40px auto; /* Center align with more space */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center text */
+}
+
+.result {
+    margin-bottom: 40px; /* Space between results */
+}
+
+.citation {
+    background-color: #f1f3f4;
+    padding: 12px;
+    margin: 12px auto;
+    max-width: 700px;
+    border-radius: 6px;
+    text-align: left;
 }

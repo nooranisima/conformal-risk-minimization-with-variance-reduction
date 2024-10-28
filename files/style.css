@@ -2,9 +2,10 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-weight: 300;
     margin: 0; /* No margin for full-page coverage */
-    height: 100vh; /* Full page height */
+    height: auto; /* Allow content to determine height */
     background: linear-gradient(45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1, #26c6da); /* Subtle moving blue background */
     animation: backgroundAnimation 10s linear infinite; /* Animation for the background */
+    overflow-y: scroll; /* Allow vertical scrolling */
 }
 
 @keyframes backgroundAnimation {
@@ -58,10 +59,11 @@ p, .caption {
 }
 
 .main-container {
-    max-width: 1000px; /* Increased width */
-    margin: 40px auto; /* Center align with more space */
+    width: 100%; /* Full width for main container */
+    margin: 20px 0; /* Vertical margin for spacing */
     padding: 20px; /* Add padding */
     text-align: center; /* Center text */
+    background-color: #87CEEB; /* Sky blue background */
 }
 
 .result {

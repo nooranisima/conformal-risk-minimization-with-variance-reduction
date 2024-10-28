@@ -29,8 +29,8 @@ h3 {
 }
 
 .main-container {
-    width: 60%; /* Set width to 80% */
-    max-width: 500px; /* Adjusted max-width for smaller screens */
+    width: 80%; /* Set width to 80% */
+    max-width: 800px; /* Adjusted max-width for smaller screens */
     margin: 0 auto;
     text-align: center;
     font-weight: bold;
@@ -53,8 +53,8 @@ h3 {
 }
 
 .image-container img {
-    width: 60%; /* Adjusted width for images */
-    max-width: 60%; /* Prevent overflow */
+    width: 80%; /* Adjusted width for images */
+    max-width: 80%; /* Prevent overflow */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

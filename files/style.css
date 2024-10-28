@@ -6,9 +6,13 @@ body {
     color: #333;
 }
 
-.banner-container {
-    text-align: center;
-    padding: 20px;
+.banner-container a {
+    color: #6A0dad; /* Dark purple color */
+    text-decoration: none; /* Remove underline */
+}
+
+.banner-container a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
 }
 
 h1 {

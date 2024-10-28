@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Paper Title</title>
     <link rel="stylesheet" href="files/style.css">
+    <title>Conformal Risk Minimization with Variance Reduction</title>
 </head>
 <body>
-    <canvas></canvas> <!-- Fixed background canvas -->
-
     <div class="banner-container">
-        <h1>Your Paper Title</h1>
-        <h3>Authors: Author One, Author Two, Author Three</h3>
-        <p class="abstract">This is the abstract of your paper, summarizing the main findings and contributions.</p>
+        <h1>Conformal Risk Minimization with Variance Reduction</h1>
+        <h3>Sima Noorani, Orlando Romero, Nicolo Dal Fabbro, Hamed Hassani, & George J. Pappas</h3>
+        <p>Department of Electrical and Systems Engineering<br>
+        University of Pennsylvania<br>
+        Philadelphia, PA 19104, USA<br>
+        {nooranis,oromero,ndf96,hassani,pappasg}@seas.upenn.edu</p>
+        <p class="abstract">Conformal prediction (CP) is a distribution-free framework for achieving probabilistic guarantees on black-box models. CP is generally applied to a model post-training. Recent research efforts, on the other hand, have focused on optimizing CP efficiency during training. We formalize this concept as the problem of conformal risk minimization (CRM). In this direction, conformal training (ConfTr) by Stutz et al. (2022) is a technique that seeks to minimize the expected prediction set size of a model by simulating CP in-between training updates. Despite its potential, we identify a strong source of sample inefficiency in ConfTr that leads to overly noisy estimated gradients, introducing training instability and limiting practical use. To address this challenge, we propose variance-reduced conformal training (VR-ConfTr), a CRM method that incorporates a variance reduction technique in the gradient estimation of the ConfTr objective function. Through extensive experiments on various benchmark datasets, we demonstrate that VR-ConfTr consistently achieves faster convergence and smaller prediction sets compared to baselines.</p>
         <div class="buttons">
-            <button class="btn btn-primary" onclick="window.location.href='link-to-code'">Code</button>
-            <button class="btn btn-primary" onclick="window.location.href='link-to-paper'">Paper</button>
+            <a href="#" class="btn btn-primary">Code</a>
+            <a href="#" class="btn btn-primary">Paper</a>
         </div>
     </div>
 
     <div class="main-container">
         <h2>Training Pipeline</h2>
-        <img src="path-to-your-training-pipeline-image" alt="Training Pipeline" style="max-width: 100%; height: auto;">
-        <p>Description of the training pipeline goes here.</p>
+        <img src="path/to/your/image.png" alt="Training Pipeline" class="training-image">
+        <p class="caption">Description of the training pipeline goes here.</p>
+
+        <hr class="divider">
 
         <h2>Experimental Results</h2>
-        <div class="results-section">
-            <h3>Result 1</h3>
-            <img src="path-to-result-image-1" alt="Result Image 1" style="max-width: 100%; height: auto;">
-            <p>Paragraph explaining the first experimental result.</p>
-
-            <h3>Result 2</h3>
-            <img src="path-to-result-image-2" alt="Result Image 2" style="max-width: 100%; height: auto;">
-            <p>Paragraph explaining the second experimental result.</p>
+        <div class="result">
+            <img src="path/to/your/result1.png" alt="Experimental Result 1" class="result-image">
+            <p class="caption">Paragraph describing the first experimental result.</p>
+        </div>
+        <div class="result">
+            <img src="path/to/your/result2.png" alt="Experimental Result 2" class="result-image">
+            <p class="caption">Paragraph describing the second experimental result.</p>
         </div>
 
-        <h2>Related Works</h2>
-        <p>A brief overview of related works goes here.</p>
+        <hr class="divider">
 
-        <h2>BibTeX Citation</h2>
-        <pre class="citation">
-@article{your-citation-key,
-  title={Your Paper Title},
-  author={Author One and Author Two and Author Three},
-  journal={Journal Name},
-  year={2024},
-  volume={1},
-  number={1},
-  pages={1-10},
-  publisher={Publisher Name}
-}
-        </pre>
+        <h2>Related Works</h2>
+        <p class="caption">Brief description of related works.</p>
+
+        <div class="citation">
+            <h4>Bibliography:</h4>
+            <p>Here is the BibTeX citation.</p>
+        </div>
     </div>
 </body>
 </html>

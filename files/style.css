@@ -7,6 +7,21 @@ canvas {
 body {
     font-family: "Times New Roman", Times, serif;
     font-weight: 300;
+    margin: 0; /* Ensure full page usage */
+    height: 100vh; /* Ensure full page height */
+}
+
+.banner-container, .main-container {
+    max-width: 800px; /* Restrict max width for better readability */
+    margin: 0 auto; /* Center align */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+    position: relative; /* Position for absolute children */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for actual centering */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,15 +34,6 @@ h1, h2, h3, h4, h5, h6 {
 p, .caption {
     font-family: "Times New Roman", Times, serif;
     margin-top: 4px;
-}
-
-.banner-container, .main-container, .outer-container, .container {
-    max-width: 800px; /* Restrict max width for better readability */
-    margin: 0 auto; /* Center align */
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 hr.divider {
@@ -71,11 +77,13 @@ hr.divider {
     margin: 8px;
     border-radius: 4px;
     font-size: 15px;
+    color: red; /* Red text for buttons */
+    text-decoration: none; /* Remove underline from links */
+    border: 1px solid red; /* Optional: add border */
 }
 
 .buttons .btn-primary {
-    background-color: #055ada;
-    color: #fff;
+    background-color: transparent; /* Make button background transparent */
 }
 
 .btn-search {

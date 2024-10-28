@@ -51,13 +51,16 @@ p, .caption {
     margin: 8px;
     border-radius: 4px;
     font-size: 15px;
-    color: red; /* Red text for buttons */
-    text-decoration: none; /* Remove underline from links */
-    border: 1px solid red; /* Optional: add border */
+    color: #fff; /* White text for buttons */
+    background-color: #ffb3d9; /* Light pastel pink background for buttons */
+    border: none; /* No border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.6); /* 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-.buttons .btn-primary {
-    background-color: transparent; /* Make button background transparent */
+.buttons .btn:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Darker shadow on hover */
 }
 
 .main-container {

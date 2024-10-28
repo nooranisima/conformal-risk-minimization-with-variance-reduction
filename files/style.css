@@ -29,8 +29,8 @@ h3 {
 }
 
 .main-container {
-    width: 80%; /* Set width to 80% */
-    max-width: 900px; /* Adjusted max-width for smaller screens */
+    width: 60%; /* Set width to 80% */
+    max-width: 500px; /* Adjusted max-width for smaller screens */
     margin: 0 auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);

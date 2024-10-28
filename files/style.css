@@ -36,7 +36,6 @@ h3 {
 
 p, .caption {
     font-size: 1.2em; /* Increased paragraph font size */
-    margin-top: 20px; /* Increased margin */
 }
 
 .abstract {
@@ -60,14 +59,16 @@ p, .caption {
 
 .main-container {
     width: 100%; /* Full width for main container */
-    margin: 20px 0; /* Vertical margin for spacing */
     padding: 20px; /* Add padding */
     text-align: center; /* Center text */
     background-color: #87CEEB; /* Sky blue background */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .result {
-    margin-bottom: 40px; /* Space between results */
+    margin-bottom: 20px; /* Space between results, can be adjusted */
 }
 
 .citation {

@@ -30,7 +30,7 @@ h3 {
 
 .main-container {
     width: 80%; /* Set width to 80% */
-    max-width: 800px; /* Adjusted max-width for smaller screens */
+    max-width: 1000px; /* Adjusted max-width for smaller screens */
     margin: 0 auto;
     text-align: center;
     font-weight: bold;

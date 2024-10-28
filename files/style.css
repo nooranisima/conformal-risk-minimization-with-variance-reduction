@@ -9,6 +9,8 @@ body {
 .banner-container a {
     color: #6A0dad; /* Dark purple color */
     text-decoration: none; /* Remove underline */
+    text-align: center;
+
 }
 
 .banner-container a:hover {

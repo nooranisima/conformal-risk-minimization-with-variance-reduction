@@ -32,6 +32,8 @@ h3 {
     width: 60%; /* Set width to 80% */
     max-width: 500px; /* Adjusted max-width for smaller screens */
     margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
@@ -47,11 +49,12 @@ h3 {
 .image-container {
     margin-bottom: 30px; /* Add space below each image section */
     text-align: center;
+    font-weight: bold;
 }
 
 .image-container img {
-    width: 80%; /* Adjusted width for images */
-    max-width: 80%; /* Prevent overflow */
+    width: 60%; /* Adjusted width for images */
+    max-width: 60%; /* Prevent overflow */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -73,7 +76,8 @@ p {
 
 /* Button Styles */
 .button-container {
-    text-align: center; /* Center the buttons */
+    text-align: center;
+    font-weight: bold; 
 }
 
 button {

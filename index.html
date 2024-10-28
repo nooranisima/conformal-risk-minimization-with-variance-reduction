@@ -3,143 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/style.css">
     <title>Conformal Risk Minimization with Variance Reduction</title>
-    <link rel="stylesheet" href="files/style.css"> <!-- Link to the CSS file -->
 </head>
 <body>
     <div class="banner-container">
         <h1>Conformal Risk Minimization with Variance Reduction</h1>
         <h2>Sima Noorani, Orlando Romero, Nicolo Dal Fabbro, Hamed Hassani, & George J. Pappas</h2>
-        <h3>Department of Electrical and Systems Engineering<br>University of Pennsylvania<br>Philadelphia, PA 19104, USA<br>{nooranis,oromero,ndf96,hassani,pappasg}@seas.upenn.edu</h3>
-        
-        <div class="buttons">
-            <button class="btn btn-primary" onclick="window.location.href='#'">Code</button> <!-- Placeholder link -->
-            <button class="btn btn-primary" onclick="window.location.href='#'">Paper</button> <!-- Placeholder link -->
-        </div>
+        <h3>Department of Electrical and Systems Engineering<br>University of Pennsylvania<br>Philadelphia, PA 19104, USA<br>{nooranis, oromero, ndf96, hassani, pappasg}@seas.upenn.edu</h3>
     </div>
 
     <div class="main-container">
-        <h2>Abstract</h2>
-        <p class="abstract">Conformal prediction (CP) is a distribution-free framework for achieving probabilistic guarantees on black-box models. CP is generally applied to a model post-training. Recent research efforts, on the other hand, have focused on optimizing CP efficiency during training. We formalize this concept as the problem of conformal risk minimization (CRM). In this direction, conformal training (ConfTr) by Stutz et al. (2022) is a technique that seeks to minimize the expected prediction set size of a model by simulating CP in-between training updates. Despite its potential, we identify a strong source of sample inefficiency in ConfTr that leads to overly noisy estimated gradients, introducing training instability and limiting practical use. To address this challenge, we propose variance-reduced conformal training (VR-ConfTr), a CRM method that incorporates a variance reduction technique in the gradient estimation of the ConfTr objective function. Through extensive experiments on various benchmark datasets, we demonstrate that VR-ConfTr consistently achieves faster convergence and smaller prediction sets compared to baselines.</p>
-        
-        <h2>Training Pipeline</h2>
-        <img src="files/pipeline-fig.png" alt="Training Pipeline" style="max-width: 100%; height: auto;"> <!-- Image for training pipeline -->
+        <div class="abstract-container">
+            <h2>Abstract</h2>
+            <p>Conformal prediction (CP) is a distribution-free framework for achieving probabilistic guarantees on black-box models. CP is generally applied to a model post-training. Recent research efforts, on the other hand, have focused on optimizing CP efficiency during training. We formalize this concept as the problem of conformal risk minimization (CRM). In this direction, conformal training (ConfTr) by Stutz et al. (2022) is a technique that seeks to minimize the expected prediction set size of a model by simulating CP in-between training updates. Despite its potential, we identify a strong source of sample inefficiency in ConfTr that leads to overly noisy estimated gradients, introducing training instability and limiting practical use. To address this challenge, we propose variance-reduced conformal training (VR-ConfTr), a CRM method that incorporates a variance reduction technique in the gradient estimation of the ConfTr objective function. Through extensive experiments on various benchmark datasets, we demonstrate that VR-ConfTr consistently achieves faster convergence and smaller prediction sets compared to baselines.</p>
+        </div>
 
-        <h2>Experimental Results</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Algorithm</th>
-                    <th>Avg Acc</th>
-                    <th>Std Acc</th>
-                    <th>Avg Size</th>
-                    <th>Std Size</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="3">MNIST</td>
-                    <td>Baseline</td>
-                    <td>0.887</td>
-                    <td>0.004</td>
-                    <td>4.122 (+12%)</td>
-                    <td>0.127</td>
-                </tr>
-                <tr>
-                    <td>ConfTr~\cite{stutz2022learning}</td>
-                    <td>0.842</td>
-                    <td>0.141</td>
-                    <td>3.990 (+8%)</td>
-                    <td>0.730</td>
-                </tr>
-                <tr>
-                    <td>VR-ConfTr <strong>(ours)</strong></td>
-                    <td>0.886</td>
-                    <td>0.071</td>
-                    <td><strong>3.688</strong></td>
-                    <td>0.350</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Fashion-MNIST</td>
-                    <td>Baseline</td>
-                    <td>0.845</td>
-                    <td>0.002</td>
-                    <td>3.218 (+15%)</td>
-                    <td>0.048</td>
-                </tr>
-                <tr>
-                    <td>ConfTr~\cite{stutz2022learning}</td>
-                    <td>0.799</td>
-                    <td>0.065</td>
-                    <td>3.048 (+9%)</td>
-                    <td>0.201</td>
-                </tr>
-                <tr>
-                    <td>VR-ConfTr <strong>(ours)</strong></td>
-                    <td>0.839</td>
-                    <td>0.043</td>
-                    <td><strong>2.795</strong></td>
-                    <td>0.154</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Kuzushiji-MNIST</td>
-                    <td>Baseline</td>
-                    <td>0.872</td>
-                    <td>0.046</td>
-                    <td>4.982 (+6%)</td>
-                    <td>0.530</td>
-                </tr>
-                <tr>
-                    <td>ConfTr~\cite{stutz2022learning}</td>
-                    <td>0.783</td>
-                    <td>0.125</td>
-                    <td>4.762 (+2%)</td>
-                    <td>0.226</td>
-                </tr>
-                <tr>
-                    <td>VR-ConfTr <strong>(ours)</strong></td>
-                    <td>0.835</td>
-                    <td>0.098</td>
-                    <td><strong>4.657</strong></td>
-                    <td>0.680</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">OrganA-MNIST</td>
-                    <td>Baseline</td>
-                    <td>0.552</td>
-                    <td>0.017</td>
-                    <td>4.823 (+2%)</td>
-                    <td>0.748</td>
-                </tr>
-                <tr>
-                    <td>ConfTr~\cite{stutz2022learning}</td>
-                    <td>0.526</td>
-                    <td>0.047</td>
-                    <td>6.362 (+33%)</td>
-                    <td>0.857</td>
-                </tr>
-                <tr>
-                    <td>VR-ConfTr <strong>(ours)</strong></td>
-                    <td>0.547</td>
-                    <td>0.021</td>
-                    <td><strong>4.776</strong></td>
-                    <td>1.178</td>
-                </tr>
-            </tbody>
-        </table>
-        <caption>Summary of evaluation results. For <tt>VR-ConfTr</tt>, we show in percentage the average set size (<strong>Avg Size</strong>) improvement against <tt>ConfTr</tt> by~\cite{stutz2022learning}. Third and fourth column are the average accuracy (<strong>Avg Acc</strong>) and its standard deviation (<strong>Std Acc</strong>).</caption>
+        <div class="image-container">
+            <h2>Training Pipeline</h2>
+            <img src="files/pipeline-fig.png" alt="Training Pipeline">
+            <p><!-- Description for Training Pipeline Image --></p>
+        </div>
 
-        <h2>Curves</h2>
-        <img src="files/curves.png" alt="Curves" style="max-width: 100%; height: auto;"> <!-- Image for curves -->
+        <div class="image-container">
+            <h2>Experimental Results</h2>
+            <img src="files/table-results.png" alt="Experimental Results Table">
+            <p><!-- Description for Experimental Results Image --></p>
+        </div>
 
-        <h2>Related Works</h2>
-        <p>A brief description of related works goes here.</p>
-
-        <h2>References</h2>
-        <div class="citation">
-            <h4>References</h4>
-            <p>Your BibTeX citation goes here.</p>
+        <div class="bibtex-container">
+            <h2>BibTeX</h2>
+            <p><!-- Your BibTeX citation here --></p>
         </div>
     </div>
 </body>

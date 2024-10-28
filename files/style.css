@@ -1,91 +1,91 @@
 body {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 300;
-    margin: 0; /* No margin for full-page coverage */
-    height: auto; /* Allow content to determine height */
-    background: linear-gradient(45deg, rgba(173, 216, 230, 0.4), rgba(224, 255, 255, 0.4)); /* Light blue background */
-    animation: backgroundAnimation 10s linear infinite; /* Animation for the background */
-    overflow-y: scroll; /* Allow vertical scrolling */
-}
-
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(173, 216, 230, 0.8), rgba(255, 255, 255, 0.8));
+    color: #333;
 }
 
 .banner-container {
-    max-width: 1200px; /* Decreased width */
-    width: 90%;
-    margin: 0 auto; /* Center align */
-    padding: 20px; /* Increased padding */
-    text-align: center; /* Center text */
-    position: relative; /* Position for absolute children */
-    top: 10%; /* Adjust vertical position */
-    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 2.5em; /* Increased title font size */
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 h2 {
-    font-size: 2em; /* Increased subtitle font size */
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: normal; /* Not bold */
 }
 
 h3 {
-    font-size: 1.5em; /* Increased author font size */
-}
-
-p, .caption {
-    font-size: 1.2em; /* Increased paragraph font size */
-}
-
-.abstract {
-    text-align: center; /* Center align abstract */
-    margin: 20px 0; /* Add margin for spacing */
-}
-
-.buttons .btn {
-    padding: 10px 24px;
-    margin: 8px;
-    border-radius: 4px;
-    font-size: 15px;
-    color: #fff; /* White text for buttons */
-    background-color: #ffb3d9; /* Light pastel pink background for buttons */
-    border: none; /* No border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.6); /* 3D effect */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.buttons .btn:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Darker shadow on hover */
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+    font-weight: normal; /* Not bold */
 }
 
 .main-container {
-    max-width: 800px; /* Set max-width for the main container */
-    margin: auto; /* Center align */
-    padding: 20px; /* Add padding */
-    text-align: center; /* Center text */
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque background for the main content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
+    width: 80%; /* Set width to 80% */
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.result {
-    margin-bottom: 20px; /* Space between results, can be adjusted */
+.abstract-container {
+    margin-bottom: 30px; /* Add space below the abstract */
 }
 
-.citation {
-    background-color: #f1f3f4;
-    padding: 12px;
-    margin: 12px auto;
-    max-width: 700px;
-    border-radius: 6px;
-    text-align: left;
+.image-container {
+    margin-bottom: 30px; /* Add space below each image section */
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%; /* Make images responsive */
+    max-width: 100%; /* Prevent overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.related-works-container, .bibtex-container {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0; /* Add spacing above */
+}
+
+p {
+    font-size: 1rem; /* Make paragraph font size bigger */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Button Styles */
+button {
+    background-color: rgba(255, 192, 203, 0.7); /* Light pink */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 192, 203, 0.9);
+    transform: translateY(-2px); /* Slight lift effect */
 }

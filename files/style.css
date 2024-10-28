@@ -30,7 +30,7 @@ h3 {
 
 .main-container {
     width: 80%; /* Set width to 80% */
-    max-width: 1200px; /* Set a max-width for larger screens */
+    max-width: 900px; /* Adjusted max-width for smaller screens */
     margin: 0 auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
@@ -50,8 +50,8 @@ h3 {
 }
 
 .image-container img {
-    width: 100%; /* Make images responsive */
-    max-width: 100%; /* Prevent overflow */
+    width: 80%; /* Adjusted width for images */
+    max-width: 80%; /* Prevent overflow */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -72,10 +72,14 @@ p {
 }
 
 /* Button Styles */
+.button-container {
+    text-align: center; /* Center the buttons */
+}
+
 button {
     background-color: rgba(255, 192, 203, 0.7); /* Light pink */
     border: none;
-    color: white;
+    color: black; /* Changed text color to black */
     padding: 15px 30px;
     text-align: center;
     text-decoration: none;
